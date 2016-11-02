@@ -23,15 +23,21 @@
 			<h1 class="text-center">Giffaw</h1>
 			<div class="row">
 				<div class="col-sm-4">
-					<form class="form-inline">
+					<form class="form-inline" method="GET" action="http://api.giphy.com/v1/gifs/search">
 						<label>Search Gifs</label>
-						<input type="text" class="form-control gif-input" name="q" value="cats" placeholder="search gifs">
+						<input type="text" class="form-control gif-input" name="q" placeholder="search gifs">
+						<!-- <input type="hidden" name="limit" value="100"> -->
+						<input type="hidden" name="offset" value="5">
 						<input type="hidden" name="api_key" value="dc6zaTOxFJmzC">
 						<input type="submit" value="Go!" class="btn btn-primary">
 					</form>
 				</div>
+			</div>
+			<div class="row">
 				<div class="col-sm-8">
-					<div class="gif-gallery"></div>
+					<div class="gif-gallery">
+					</div>
+					<button type="button" name="button">Load More</button>
 				</div>
 			</div>
 		</div>
